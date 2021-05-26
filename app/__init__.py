@@ -8,14 +8,17 @@ db = SQLAlchemy(flask_app)
 
 def setup_db():
     # Import models here
+    from app.model import book_model
 
     db.create_all()
 
 
 def get_register_blueprints():
     # Import blueprints here
-    return [
+    from app.view.book_view import book_blueprint
 
+    return [
+        book_blueprint
     ]
 
 
