@@ -17,3 +17,8 @@ def get_register_blueprints():
     return [
 
     ]
+
+
+setup_db()
+
+[flask_app.register_blueprint(blueprint) for blueprint in get_register_blueprints()]
